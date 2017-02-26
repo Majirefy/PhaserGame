@@ -17,11 +17,6 @@ export default class Preloader extends Phaser.State {
         // this.preloadFrameSprite = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, Assets.Atlases.AtlasesPreloadSpritesXml.getName(), Assets.Atlases.AtlasesPreloadSpritesXml.Frames.PreloadFrame);
         this.preloadFrameSprite.anchor.setTo(0.5);
 
-        this.game.load.spritesheet('china', Assets.Images.ImagesChina2.getPNG(), 32, 48, 16);
-
-        this.game.load.image('tiles', Assets.Images.Tiles.getPNG());
-        this.game.load.tilemap('map', Assets.JSON.AtlasesMap.getJSON(), null, Phaser.Tilemap.TILED_JSON);
-
         this.game.load.setPreloadSprite(this.preloadBarSprite);
 
         AssetUtils.Loader.loadAllAssets(this.game, this.waitForSoundDecoding, this);
