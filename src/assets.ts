@@ -6,15 +6,10 @@ export namespace Images {
 
         static getPNG(): string { return require('assets/images/background_template.png'); };
     }
-    export class ImagesChina2 {
-        static getName(): string { return 'china2'; };
-
-        static getPNG(): string { return require('assets/images/china2.png'); };
-    }
-    export class ImagesGameLogo {
+    export class ImagesSystemGameLogo {
         static getName(): string { return 'gameLogo'; };
 
-        static getPNG(): string { return require('assets/images/gameLogo.png'); };
+        static getPNG(): string { return require('assets/images/system/gameLogo.png'); };
     }
     export class ImagesTilesetsTiles {
         static getName(): string { return 'tiles'; };
@@ -43,9 +38,6 @@ export namespace Audio {
     export class AudioMusic {
         static getName(): string { return 'music'; };
 
-        static getAC3(): string { return require('assets/audio/music.ac3'); };
-        static getM4A(): string { return require('assets/audio/music.m4a'); };
-        static getMP3(): string { return require('assets/audio/music.mp3'); };
         static getOGG(): string { return require('assets/audio/music.ogg'); };
     }
 }
