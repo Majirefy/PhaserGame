@@ -4,9 +4,8 @@ import * as Assets from '../assets';
 export default class Boot extends Phaser.State {
     public preload(): void {
         // Load any assets you need for your preloader state here.
-        this.game.load.atlasJSONArray(Assets.Atlases.AtlasesPreloadSpritesArray.getName(), Assets.Atlases.AtlasesPreloadSpritesArray.getPNG(), Assets.Atlases.AtlasesPreloadSpritesArray.getJSONArray());
-        // this.game.load.atlasJSONHash(Assets.Atlases.AtlasesPreloadSpritesHash.getName(), Assets.Atlases.AtlasesPreloadSpritesHash.getPNG(), Assets.Atlases.AtlasesPreloadSpritesHash.getJSONHash());
-        // this.game.load.atlasXML(Assets.Atlases.AtlasesPreloadSpritesXml.getName(), Assets.Atlases.AtlasesPreloadSpritesXml.getPNG(), Assets.Atlases.AtlasesPreloadSpritesXml.getXML());
+        this.game.load.atlasJSONArray(Assets.Atlases.AtlasesPreloadSprites.getName(), Assets.Atlases.AtlasesPreloadSprites.getPNG(), Assets.Atlases.AtlasesPreloadSprites.getJSONArray());
+        this.game.load.image('augix', Assets.Images.ImagesSystemAugix.getPNG());
     }
 
     public create(): void {
@@ -32,8 +31,15 @@ export default class Boot extends Phaser.State {
             // Any mobile specific stuff here
 
             // Comment the following and uncomment the line after that to force portrait mode instead of landscape
-            this.game.scale.forceOrientation(true, false);
-            // this.game.scale.forceOrientation(false, true);
+            // this.game.scale.forceOrientation(true, false);
+            this.game.scale.forceOrientation(false, true);
+            this.game.scale.enterIncorrectOrientation.add(() => {
+                document.getElementById('landscape').style.display = 'block';
+            }, this.game);
+
+            this.game.scale.leaveIncorrectOrientation.add(() => {
+                document.getElementById('landscape').style.display = 'none';
+            }, this.game);
         }
 
         // Use DEBUG to wrap code that should only be included in a DEBUG build of the game

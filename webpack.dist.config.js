@@ -29,9 +29,9 @@ module.exports = {
             'GIT_REVISION': JSON.stringify(new GitRevisionPlugin().commithash()),
 
             // Do not modify these manually, you may break things...
-            'DEFAULT_GAME_WIDTH': /*[[DEFAULT_GAME_WIDTH*/800/*DEFAULT_GAME_WIDTH]]*/,
+            'DEFAULT_GAME_WIDTH': /*[[DEFAULT_GAME_WIDTH*/600/*DEFAULT_GAME_WIDTH]]*/,
             'DEFAULT_GAME_HEIGHT': /*[[DEFAULT_GAME_HEIGHT*/800/*DEFAULT_GAME_HEIGHT]]*/,
-            'MAX_GAME_WIDTH': /*[[MAX_GAME_WIDTH*/800/*MAX_GAME_WIDTH]]*/,
+            'MAX_GAME_WIDTH': /*[[MAX_GAME_WIDTH*/600/*MAX_GAME_WIDTH]]*/,
             'MAX_GAME_HEIGHT': /*[[MAX_GAME_HEIGHT*/800/*MAX_GAME_HEIGHT]]*/,
             'SCALE_MODE': JSON.stringify(/*[[SCALE_MODE*/'SHOW_ALL'/*SCALE_MODE]]*/),
 
