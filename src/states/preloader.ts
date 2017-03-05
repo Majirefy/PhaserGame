@@ -19,17 +19,11 @@ export default class Preloader extends Phaser.State {
 
         this.game.load.setPreloadSprite(this.preloadBarSprite);
 
-        this.game.load.spritesheet('uiButtons', Assets.Images.ImagesUiButtons.getPNG(), 260, 100);
-        this.game.load.image('logo', Assets.Images.ImagesSystemLogo.getPNG());
-        this.game.load.audio('title', Assets.Audio.AudioTitle.getOGG(), true);
+        this.game.load.spritesheet('buttonsSprites', Assets.Images.ImagesUiButtons.getPNG(), 260, 100);
 
-        this.game.load.image('red', Assets.Images.ImagesBlocksRed.getPNG());
-        this.game.load.image('green', Assets.Images.ImagesBlocksGreen.getPNG());
-        this.game.load.image('blue', Assets.Images.ImagesBlocksBlue.getPNG());
-        this.game.load.image('yellow', Assets.Images.ImagesBlocksYellow.getPNG());
-
-        this.game.load.spritesheet('rings', Assets.Images.ImagesBlocksRing.getPNG(), 100, 100);
-        this.game.load.spritesheet('balls', Assets.Images.ImagesBlocksBalls.getPNG(), 50, 50);
+        this.game.load.spritesheet('ringSprites', Assets.Images.ImagesBlocksRing.getPNG(), 100, 100);
+        this.game.load.spritesheet('ballSprites', Assets.Images.ImagesBlocksBalls.getPNG(), 50, 50);
+        this.game.load.spritesheet('soundSprites', Assets.Images.ImagesUiSound.getPNG(), 64, 64);
 
         AssetUtils.Loader.loadAllAssets(this.game, this.waitForSoundDecoding, this);
     }

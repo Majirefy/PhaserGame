@@ -75,10 +75,20 @@ export namespace Atlases {
 }
 
 export namespace Audio {
+    export class AudioLose {
+        static getName(): string { return 'lose'; };
+
+        static getOGG(): string { return require('assets/audio/lose.ogg'); };
+    }
     export class AudioMusic {
         static getName(): string { return 'music'; };
 
         static getOGG(): string { return require('assets/audio/music.ogg'); };
+    }
+    export class AudioPoint {
+        static getName(): string { return 'point'; };
+
+        static getOGG(): string { return require('assets/audio/point.ogg'); };
     }
     export class AudioTitle {
         static getName(): string { return 'title'; };

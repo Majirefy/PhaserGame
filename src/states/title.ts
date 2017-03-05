@@ -13,7 +13,7 @@ export default class Title extends Phaser.State {
 
         this.logo = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY - (this.game.world.centerY / 2), 'logo');
         this.logo.anchor.setTo(0.5);
-        this.startButton = this.game.add.button(this.game.world.centerX, this.game.world.centerY + (this.game.world.centerY / 2), 'uiButtons', () => {
+        this.startButton = this.game.add.button(this.game.world.centerX, this.game.world.centerY + (this.game.world.centerY / 2), 'buttonsSprites', () => {
             this.game.camera.fade(0xffffff, 1000);
             this.game.camera.onFadeComplete.addOnce(() => {
                 this.game.state.start('main');
